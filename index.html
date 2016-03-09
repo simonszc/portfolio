@@ -6,7 +6,7 @@
     <title>Portfolio - Zach Simonson</title>
     <link rel="stylesheet" href="vendor/normalize.css" media="screen" title="no title" charset="utf-8">
   <link rel="stylesheet" href="vendor/style.css">
-    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="styles/base.css">
     </style>
   </head>
   <body>
@@ -17,28 +17,46 @@
         </h1>
         <p>A developer's portfolio</p>
       </header>
-      <nav>
+      <nav class="main-nav">
         <ul>
-          <li class="tab icon-home3"><a href="#">Home</a></li>
-          <li class="tab icon-user"><a href="#">About Me</a></li>
-          <li class="tab icon-facebook2"><a href="https://www.facebook.com/zsimonson">Facebook</a></li>
-          <li class="tab icon-github"><a href="https://github.com/simonszc">GitHub</a></li>
+          <li class="tab icon-home3" data-content="projects"><a href="#">Home</a></li>
+          <li class="tab icon-user" data-content="about"><a href="#">About Me</a></li>
+          <li class="tab icon-facebook2" data-content="facebook"><a href="https://www.facebook.com/zsimonson">Facebook</a></li>
+          <li class="tab icon-github" data-content="github"><a href="https://github.com/simonszc">GitHub</a></li>
         </ul>
       </nav>
       <section id="projects" class="tab-content">
         <article class="template" data-category="cat">
           <header>
-            <h1><a href=''>Title</a></h1>
+            <h3><a href=''>Title</a></h3>
             <div class="byline">
               Published on <time>Publish Date</time>
             </div>
           </header>
           <section class="project-description"></section>
         </article>
+        <
+      </section>
+      <section id="about" class="tab-content">
+        <header>
+          <h2>About Me</h2>
+        </header>
+        <section>
+          <p>I am a new developer based in Seattle. I graduated with a B.A. in Theatre from Whitman College in 2007 and pursued a career in acting here in Seattle afterward. I'm now looking to start a career as a web developer. </p>
+          <h4>Random Fun Facts</h4>
+          <ul>
+            <li>I'm an avid hiker. I backpack up to Gothic Basin twice a year, and I'm planning on making it to the Hoh glacier this year</li>
+            <li>I can recite the entire prologue of the Canterbury Tales in relatively well-pronounced Middle English. They taught us to in high school and I loved it so much I just kept doing it</li>
+            <li>My cat's name is Archimedes, the Educated Cat</li>
+            <li>My favorite superhero is Kate Bishop</li>
+            <li>I sing a mean "What's Up?" by Four Non Blondes at karaoke</li>
+          </ul>
+        </section>
       </section>
     </main>
     <script src="vendor/jquery-1.12.1.js"></script>
     <script src="scripts/blogProjects.js"></script>
     <script src="scripts/project.js"></script>
+    <script src="scripts/projectView.js"></script>
   </body>
 </html>
