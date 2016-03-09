@@ -10,8 +10,8 @@ function Project(opts){
 Project.prototype.toHtml = function() {
   var $newProject = $('article.template').clone();
 
-  $newProject.find('h1 > a').html(this.title);
-  $newProject.find('h1 > a').attr('href', this.projectUrl);
+  $newProject.find('h3 > a').text(this.title);
+  $newProject.find('h3 > a').attr('href', this.projectUrl);
   $newProject.find('.byline time').html(this.publishedOn);
   $newProject.find('.project-description').html(this.body);
 
@@ -25,5 +25,7 @@ rawData.forEach(function(ele) {
 })
 
 projects.forEach(function(a){
-  $('#projects').append(a.toHtml())
+  $('#projects').append(a.toHtml());
 });
+
+$('article.template').hide();
