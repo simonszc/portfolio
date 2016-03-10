@@ -8,12 +8,12 @@ main > header {
 .main-nav ul {
   display: none;
   list-style-type: none;
+  padding-left: 3%
 }
 
 .main-nav:hover ul {
   display: block;
   margin-top: 0px;
-  padding-left: 3%;
 }
 
 .main-nav li {
@@ -33,7 +33,6 @@ main > section{
     padding-bottom: 10px;
     display: block;
     list-style-type: none;
-    padding-left: 3%;
   }
 
   .main-nav li {
