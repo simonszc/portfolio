@@ -10,7 +10,7 @@ main > header {
   list-style-type: none;
 }
 
-.main-nav:hover ul {
+.main-nav ul.touched {
   display: block;
   margin-top: 0px;
   padding-left: 3%;
@@ -25,7 +25,7 @@ main > section{
   padding-left: 3%;
 }
 
-@media and screen and (min-width: 700px) {
+@media only screen and (min-width: 700px) {
 
   .main-nav ul {
     margin-top: 0px;

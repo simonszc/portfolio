@@ -15,13 +15,6 @@ main > header {
   .icon-menu {
     display: none;
   }
+  
 
-  .main-nav ul {
-    margin-top: 0px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    display: flex;
-    justify-content: space-around;
-    list-style-type: none;
-  }
 }
