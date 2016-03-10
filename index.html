@@ -9,7 +9,17 @@
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/layout.css">
     <link rel="stylesheet" href="styles/modules.css">
-    </style>
+    <script id="project-template" type="text/x-handlebars-template">
+      <article>
+        <header>
+          <h3><a href='{{projectUrl}}'>{{title}}</a></h3>
+          <div class="byline">
+            Published on <time>{{publishedOn}}</time>
+          </div>
+        </header>
+        <section class="project-description">{{{projectDescription}}}</section>
+      </article>
+    </script>
   </head>
   <body>
     <main>
@@ -29,15 +39,6 @@
         </ul>
       </nav>
       <section id="projects" class="tab-content">
-        <article class="template" data-category="cat">
-          <header>
-            <h3><a href=''>Title</a></h3>
-            <div class="byline">
-              Published on <time>Publish Date</time>
-            </div>
-          </header>
-          <section class="project-description"></section>
-        </article>
       </section>
       <section id="about" class="tab-content">
         <header>
@@ -57,6 +58,7 @@
       </section>
     </main>
     <script src="vendor/jquery-1.12.1.js"></script>
+    <script src="vendor/handlebars-v4.0.5.js"></script>
     <script src="scripts/blogProjects.js"></script>
     <script src="scripts/project.js"></script>
     <script src="scripts/projectView.js"></script>

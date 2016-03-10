@@ -3,18 +3,18 @@ var rawData = [
     title:  'micCheck',
     projectUrl: 'https://github.com/simonszc/starving_artists',
     publishedOn: '2015-1-29',
-    body: '<p>A prototype for an open-sourced live performance database/listing app.</p>'
+    projectDescription: '<p>A prototype for an open-sourced live performance database/listing app.</p>'
   },
   {
     title: 'busMall',
     projectUrl: 'https://github.com/simonszc/bus-mall',
     publishedOn: '2015-1-21',
-    body: '<p>Single page app that displays images for the user to choose between, then displays their relative popularity</p>'
+    projectDescription: '<p>Single page app that displays images for the user to choose between, then displays their relative popularity</p>'
   },
   {
     title: 'campfireCoffee',
     projectUrl: 'https://github.com/simonszc/campfire-espresso',
     publishedOn: '2015-1-14',
-    body: '<p>A theoretical site for a theoretical coffee company that also has a backpage with functionality to display randomized datasets for several kiosks using a set of properties for each.'
+    projectDescription: '<p>A theoretical site for a theoretical coffee company that also has a backpage with functionality to display randomized datasets for several kiosks using a set of properties for each.'
   }
 ];
