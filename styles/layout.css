@@ -25,17 +25,19 @@ main > section{
   padding-left: 3%;
 }
 
-@media and screen and (min-width: 700px) {
+@media  only screen and (min-width: 600px) {
 
   .main-nav ul {
     margin-top: 0px;
     padding-top: 10px;
     padding-bottom: 10px;
     display: block;
-    justify-content: space-around;
     list-style-type: none;
   }
+
   .main-nav li {
     display: inline;
+    margin-left: 5%;
+    margin-right: 5%;
   }
 }
