@@ -6,7 +6,7 @@ projectView.handleMainNav = function() {
     $('.tab-content').hide();
     $('.tab-content[id = "'+$content +'"]').fadeIn();
   });
-  $('.main-nav .tab:first').click();
+        $('.main-nav .tab:first').click();
 };
 
 $(document).ready(function(){

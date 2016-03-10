@@ -1,0 +1,19 @@
+main > header {
+  background-color: #6B88AC;
+}
+
+.main-nav {
+    background-color: #64AB99;
+}
+.icon-menu {
+  font-size: 200%;
+  position: absolute;
+  right: 1%;
+}
+
+@media only screen and (min-width: 600px) {
+  .icon-menu {
+    display: none;
+  }
+
+}
