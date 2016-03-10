@@ -2,6 +2,26 @@ main > header {
   background-color: #6B88AC;
 }
 
-.main-nav ul {
+.main-nav {
     background-color: #64AB99;
+}
+.icon-menu {
+  font-size: 200%;
+  position: absolute;
+  right: 1%;
+}
+
+@media only screen and (min-width: 700px) {
+  .icon-menu {
+    display: none;
+  }
+
+  .main-nav ul {
+    margin-top: 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+  }
 }
