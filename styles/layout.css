@@ -33,6 +33,7 @@ main > section{
     padding-bottom: 10px;
     display: block;
     list-style-type: none;
+    padding-left: 3%;
   }
 
   .main-nav li {
