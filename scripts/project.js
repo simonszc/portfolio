@@ -4,20 +4,13 @@ function Project(opts){
   this.title = opts.title;
   this.projectUrl = opts.projectUrl;
   this.publishedOn = opts.publishedOn;
-  this.body = opts.body;
+  this.projectDescription = opts.projectDescription;
 }
 
 Project.prototype.toHtml = function() {
-  var $newProject = $('article.template').clone();
-
-  $newProject.find('h3 > a').text(this.title);
-  $newProject.find('h3 > a').attr('href', this.projectUrl);
-  $newProject.find('.byline time').html(this.publishedOn);
-  $newProject.find('.project-description').html(this.body);
-
-  $newProject.append('<hr>');
-  $newProject.removeClass('template');
-  return $newProject;
+  var source = $('#project-template').html();
+  var template = Handlebars.compile(source);
+  return template(this);
 }
 
 rawData.forEach(function(ele) {
