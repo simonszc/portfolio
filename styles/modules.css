@@ -11,7 +11,19 @@ main > header {
   right: 1%;
 }
 
+#projects article {
+  padding: 1%;
+  border-style: solid;
+  border-color: black;
+  border-radius: 25px;
+  margin-bottom: 1%;
+}
+
 @media only screen and (min-width: 600px) {
+
+  body {
+    font-size: 100%;
+  }
   .icon-menu {
     display: none;
   }
