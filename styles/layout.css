@@ -37,15 +37,18 @@ main > section{
     list-style-type: none;
   }
 
+  .main-nav:hover ul {
+    margin-top: 0%;
+  }
+
   .main-nav li {
     display: inline;
     margin-left: 5%;
     margin-right: 5%;
   }
-  .main-nav:hover ul {
-    margin-bottom: 1em;
-  }
+
   main > section {
     padding-top: 1em;
+    margin-right: 3%
   }
 }
