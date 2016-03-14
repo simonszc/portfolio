@@ -9,6 +9,15 @@ projectView.handleMainNav = function() {
         $('.main-nav .tab:first').click();
 };
 
-$(document).ready(function(){
+projectView.initIndexPage = function(){
+  Project.all.forEach(function(a){
+    $('#projects').append(a.toHtml());
+  });
   projectView.handleMainNav();
+};
+
+$(document).ready(function(){
+//  projectView.handleMainNav();
+    $('article.template').hide();
+    Project.fetchAll();
 });
