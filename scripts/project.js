@@ -28,7 +28,7 @@ Project.fetchAll = function() {
       storedEtag = xhr.getResponseHeader("etag");
       localStorage.setItem("etag", JSON.stringify(storedEtag));
       if (storedEtag === localStorage.etag && localStorage.rawData) {
-        Project.loadAll(localStorage.rawData);
+        Project.loadAll(JSON.parse(localStorage.rawData));
         projectView.initIndexPage();
       } else {
         $.getJSON('data/portfolioProjects.json', function(rawData) {
