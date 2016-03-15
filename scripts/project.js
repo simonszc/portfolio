@@ -31,10 +31,10 @@ Project.fetchAll = function() {
         Project.loadAll(JSON.parse(localStorage.rawData));
         projectView.initIndexPage();
       } else {
-        $.getJSON('data/portfolioProjects.json', function(rawData) {
-          console.log(rawData);
-          Project.loadAll(rawData);
-          localStorage.setItem('rawData', JSON.stringify(rawData));
+        $.getJSON('data/portfolioProjects.json', function(data) {
+          console.log(data);
+          Project.loadAll(data);
+          localStorage.setItem('rawData', JSON.stringify(data));
           projectView.initIndexPage();
           });
       }
