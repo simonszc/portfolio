@@ -17,7 +17,7 @@ projectView.initIndexPage = function(){
 };
 
 $(document).ready(function(){
-//  projectView.handleMainNav();
+  projectView.handleMainNav();
     $('article.template').hide();
     Project.fetchAll();
 });
