@@ -1,14 +1,19 @@
 * {
   font-family: 'Lato', sans-serif;
-  font-size: 100%
+  font-size: 100%;
 }
 
 a {
   text-decoration: none;
   color: #271E6C;
 }
-a:hover {
-  color: #554C99
+
+a:hover, a:focus {
+  color: #554C99;
+}
+
+a:visited {
+  color: #251B59;
 }
 
 img {
