@@ -28,7 +28,7 @@
     projectView.handleMainNav();
     $('article.template').hide();
     Project.fetchAll();
-    FunFact.fetchAll();
+    FunFact.fetchAll(projectView.initFunFacts);
   });
 
   module.projectView = projectView;
