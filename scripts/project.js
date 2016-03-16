@@ -26,6 +26,15 @@
     });
   };
 
+  Project.projectDescWordCount = function(){
+    return Project.all.map(function(project){
+      return project.projectDescription.split(/\b\S+\b/g).length
+    })
+    .reduce(function(prevTotal, curr){
+      return prevTotal + curr;
+    })
+  };
+
   Project.fetchAll = function() {
     var storedEtag;
     $.ajax({
