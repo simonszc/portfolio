@@ -15,11 +15,14 @@
     Project.all.forEach(function(a){
       $('#projects').append(a.toHtml());
     });
-    FunFact.all.forEach(function(b){
-      $('#fun-facts').append(b.toHtml());
-   })
     projectView.handleMainNav();
   };
+
+  projectView.initFunFacts = function(){
+    FunFact.all.forEach(function(a){
+      $('#fun-facts').append(a.toHtml());
+    });
+  }
 
   $(document).ready(function(){
     projectView.handleMainNav();

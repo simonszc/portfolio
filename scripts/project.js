@@ -30,7 +30,9 @@
         storedEtag = xhr.getResponseHeader("etag");
         if (storedEtag === localStorage.etag && localStorage.rawData) {
           Project.loadAll(JSON.parse(localStorage.rawData));
+          FunFact.loadAll(JSON.parse(localStorage.funFacts))
           projectView.initIndexPage();
+          projectView.initFunFacts();
         } else {
           $.getJSON('data/portfolioProjects.json', function(data) {
             Project.loadAll(data);
@@ -38,6 +40,9 @@
             localStorage.setItem('rawData', JSON.stringify(data));
             projectView.initIndexPage();
             });
+          $.getJSON('data/funFacts.json', function(data){
+            FunFact.loadAll(data);
+          })
         }
       }
     });
