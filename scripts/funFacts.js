@@ -9,7 +9,7 @@
   FunFact.prototype.toHtml = function() {
     var source = $('#fun-facts-template').html();
     var template = Handlebars.compile(source);
-    return template(this);
+    return template(this.fact);
   };
 
   FunFact.loadAll = function(rawData) {
