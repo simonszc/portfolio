@@ -15,13 +15,17 @@
     Project.all.forEach(function(a){
       $('#projects').append(a.toHtml());
     });
+    FunFact.all.forEach(function(b){
+      $('#fun-facts').append(b.toHtml());
+   })
     projectView.handleMainNav();
   };
 
   $(document).ready(function(){
     projectView.handleMainNav();
-      $('article.template').hide();
-      Project.fetchAll();
+    $('article.template').hide();
+    Project.fetchAll();
+    FunFact.fetchAll();
   });
 
   module.projectView = projectView;

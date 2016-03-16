@@ -21,6 +21,9 @@
         <section class="project-description">{{{projectDescription}}}</section>
       </article>
     </script>
+    <script id="fun-facts-template" type="text/x-handlebars-template">
+      <li>"{{fact}}"</li>
+    </script>
   </head>
   <body>
     <main>
@@ -48,7 +51,7 @@
         <section>
           <p>I am a new developer based in Seattle. I graduated with a B.A. in Theatre from Whitman College in 2007 and pursued a career in acting here in Seattle afterward. I'm now looking to starting a career as a web developer. </p>
           <h4>Random Fun Facts</h4>
-          <ul>
+          <ul id="fun-facts">
             <li>I'm an avid hiker. I backpack up to Gothic Basin twice a year, and I'm planning on making it to the Hoh glacier this year</li>
             <li>I can recite most of prologue of the Canterbury Tales in relatively well-pronounced Middle English. They taught us to in high school and I loved it so much I just kept doing it</li>
             <li>My cat's name is Archimedes, the Educated Cat</li>
@@ -62,5 +65,6 @@
     <script src="vendor/handlebars-v4.0.5.js"></script>
     <script src="scripts/project.js"></script>
     <script src="scripts/projectView.js"></script>
+    <script src="scripts/funFacts.js"></script>
   </body>
 </html>
