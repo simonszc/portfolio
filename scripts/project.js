@@ -44,11 +44,11 @@
   };
 
   Project.findDescWordCount = function(){
-    return Project.all.map(function(project){
+    return this.all.map(function(project){
       return project.projectDescription.split(/\b\S+\b/g).length
     })
     .reduce(function(prevTotal, curr){
-      return Project.wordCount = prevTotal + curr;
+      return this.wordCount = prevTotal + curr;
     })
   };
 
