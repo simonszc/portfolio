@@ -31,8 +31,8 @@
           projectView.initIndexPage();
         } else {
           $.getJSON('data/portfolioProjects.json', function(data) {
-            console.log(data);
             Project.loadAll(data);
+            console.log(data);
             localStorage.setItem("etag", JSON.stringify(storedEtag));
             localStorage.setItem('rawData', JSON.stringify(data));
             projectView.initIndexPage();
