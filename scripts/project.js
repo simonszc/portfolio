@@ -1,9 +1,8 @@
 (function(module){
   function Project(opts){
-    this.title = opts.title;
-    this.projectUrl = opts.projectUrl;
-    this.publishedOn = opts.publishedOn;
-    this.projectDescription = opts.projectDescription;
+    Object.keys(opts).forEach(function(e, index, keys) {
+      this[e]= opts[e];
+    },this);
   }
 
   Project.all = [];
@@ -44,12 +43,12 @@
 
   };
 
-  Project.projectDescWordCount = function(){
+  Project.prototype.findDescWordCount = function(){
     return Project.all.map(function(project){
       return project.projectDescription.split(/\b\S+\b/g).length
     })
     .reduce(function(prevTotal, curr){
-      return prevTotal + curr;
+      return Project.prototype.wordCount = prevTotal + curr;
     })
   };
 

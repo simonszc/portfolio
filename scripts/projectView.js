@@ -15,12 +15,15 @@
       $('#projects').append(a.toHtml('project'));
     });
     projectView.handleMainNav();
+    Project.wordCount = Project.prototype.findDescWordCount();
+    console.log(Project.prototype.wordCount);
+    $('#fun-facts').append(Project.prototype.toHtml('word-count'));
   };
 
   $(document).ready(function(){
     projectView.handleMainNav();
-      $('article.template').hide();
-      Project.fetchAll();
+    $('article.template').hide();
+    Project.fetchAll();
   });
   module.projectView = projectView;
 })(window);
