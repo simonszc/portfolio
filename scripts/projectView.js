@@ -12,7 +12,7 @@
 
   projectView.initIndexPage = function(){
     Project.all.forEach(function(a){
-      $('#projects').append(a.toHtml());
+      $('#projects').append(a.toHtml('project'));
     });
     projectView.handleMainNav();
   };

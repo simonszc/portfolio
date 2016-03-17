@@ -8,31 +8,16 @@
 
   Project.all = [];
 
-  Project.prototype.toHtml = function() {
-    var source = $('#project-template').html();
+  Project.prototype.toHtml = function(type) {
+    var source = $('#' + type +'-template').html();
     var template = Handlebars.compile(source);
     return template(this);
   }
-
-//  Project.loadAll = function(rawData) {
-//    rawData.forEach(function(ele) {
-//      Project.all.push(new Project(ele));
-//    })
-//  };
 
   Project.loadAll = function(rawData){
     Project.all = rawData.map(function(ele) {
       return new Project(ele);
     });
-  };
-
-  Project.projectDescWordCount = function(){
-    return Project.all.map(function(project){
-      return project.projectDescription.split(/\b\S+\b/g).length
-    })
-    .reduce(function(prevTotal, curr){
-      return prevTotal + curr;
-    })
   };
 
   Project.fetchAll = function() {
@@ -58,5 +43,16 @@
     });
 
   };
+
+  Project.projectDescWordCount = function(){
+    return Project.all.map(function(project){
+      return project.projectDescription.split(/\b\S+\b/g).length
+    })
+    .reduce(function(prevTotal, curr){
+      return prevTotal + curr;
+    })
+  };
+
+
   module.Project = Project;
 }) (window);
