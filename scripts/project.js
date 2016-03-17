@@ -43,12 +43,12 @@
 
   };
 
-  Project.prototype.findDescWordCount = function(){
+  Project.findDescWordCount = function(){
     return Project.all.map(function(project){
       return project.projectDescription.split(/\b\S+\b/g).length
     })
     .reduce(function(prevTotal, curr){
-      return Project.prototype.wordCount = prevTotal + curr;
+      return Project.wordCount = prevTotal + curr;
     })
   };
 

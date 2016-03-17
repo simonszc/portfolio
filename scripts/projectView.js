@@ -15,9 +15,8 @@
       $('#projects').append(a.toHtml('project'));
     });
     projectView.handleMainNav();
-    Project.wordCount = Project.prototype.findDescWordCount();
-    console.log(Project.prototype.wordCount);
-    $('#fun-facts').append(Project.prototype.toHtml('word-count'));
+    Project.all[0].wordCount = Project.findDescWordCount();
+    $('#fun-facts').append(Project.all[0].toHtml('word-count'));
   };
 
   $(document).ready(function(){
