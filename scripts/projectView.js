@@ -7,7 +7,7 @@
       $('.tab-content').hide();
       $('.tab-content[id = "'+$content +'"]').fadeIn();
     });
-          $('.main-nav .tab:first').click();
+    $('.main-nav .tab:first').click();
   };
 
   projectView.initIndexPage = function(){
@@ -25,6 +25,6 @@
     $('article.template').hide();
     Project.fetchAll();
   });
-  
+
   module.projectView = projectView;
 })(window);
