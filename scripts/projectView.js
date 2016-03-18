@@ -11,6 +11,7 @@
   };
 
   projectView.initIndexPage = function(){
+    //This forEach() isn't getting changed to a map because I don't want a new array, I want to complete a method on a JQUERY object for each instance.
     Project.all.forEach(function(a){
       $('#projects').append(a.toHtml('project'));
     });
@@ -24,5 +25,6 @@
     $('article.template').hide();
     Project.fetchAll();
   });
+  
   module.projectView = projectView;
 })(window);
