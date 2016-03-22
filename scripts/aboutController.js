@@ -4,6 +4,8 @@
   aboutController.index = function() {
     $('#projects').hide();
     $('#about').fadeIn();
+
+    repos.requestRepos(repoView.index);
   };
 
   module.aboutController = aboutController;
