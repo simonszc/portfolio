@@ -34,7 +34,7 @@
             Project.loadAll(data);
             localStorage.setItem("etag", JSON.stringify(storedEtag));
             localStorage.setItem('rawData', JSON.stringify(data));
-            projectView.initIndexPage();
+            callback();
           });
         }
       }

@@ -5,15 +5,12 @@
   repos.all = [];
 
   repos.requestRepos = function(callback) {
-    $.ajax({
-      url: 'https://api.github.com/users/simonszc/repos' + '?per_page=1&sort=updated',
-      type: 'GET',
-      headers:{ 'authorization': 'token ' + githubToken },
-      success: function(data, massage , xhr){
+    $.get('/github/users/simonszc/repos' +
+      '?per_page=1&sort=updated')
+    .done(function(data, message, xhr){
         repos.all = data;
-        callback();
-      }
     })
+    .done(callback);
   };
 
 
